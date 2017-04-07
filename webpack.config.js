@@ -36,17 +36,12 @@ module.exports = {
                 test: /\.jsx$/,
                 enforce: 'pre',
                 loader: 'eslint-loader',
-                // options: {
-                //     extends: 'airbnb',
-                //     rules: {
-                //         'comma-dangle': 2
-                //     }
-                // },
+                // 发现以下配置的 options 未作用
                 options: {
                     extends: 'airbnb',
                     rules: {
-                        indent: ['off']
-
+                        indent: ['off'],
+                        'comma-dangle': 2
                     }
                 },
                 include: APP_PATH
